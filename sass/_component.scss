@@ -3,23 +3,63 @@
 
 .logo {
   height: 3.2rem;
+  margin-left: 3rem;
 }
 
 // search box
 .search {
+  flex: 0 0 40%;
+
+  //   nested flexbox container
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-3);
+    border: none;
+    width: 90%;
+    padding: 1rem 2rem;
+    border-radius: 50rem;
+    transition: all 0.8s;
+
+    //  to get the search icon on top
+    margin-right: -3rem;
+
+    &:focus {
+      outline: none;
+      width: 100%;
+    }
   }
-  &__button {
+
+  &__btn {
+    border: none;
+    background-color: var(--color-grey-light-3);
+    cursor: pointer;
   }
 
   &__icon {
     height: 2rem;
     width: 2rem;
+    //  to change the color of svg icon
+    fill: var(--color-grey-dark-3);
+  }
+
+  &::placeholder {
+    font-weight: 100;
+    color: var(--color-grey-light-4);
   }
 }
 
 // user nav
 .user-nav {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+
   &__icon-box {
   }
 

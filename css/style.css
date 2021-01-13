@@ -1,9 +1,37 @@
 .logo {
-  height: 3.2rem; }
+  height: 3.2rem;
+  margin-left: 3rem; }
 
-.search__icon {
-  height: 2rem;
-  width: 2rem; }
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .search__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-3);
+    border: none;
+    width: 90%;
+    padding: 1rem 2rem;
+    border-radius: 50rem;
+    transition: all 0.8s;
+    margin-right: -3rem; }
+    .search__input:focus {
+      outline: none;
+      width: 100%; }
+  .search__btn {
+    border: none;
+    background-color: var(--color-grey-light-3);
+    cursor: pointer; }
+  .search__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3); }
+  .search::placeholder {
+    font-weight: 100;
+    color: var(--color-grey-light-4); }
 
 .user-nav__icon {
   height: 2.25rem;
@@ -24,7 +52,9 @@
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
-  display: flex; }
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .content {
   display: flex; }
