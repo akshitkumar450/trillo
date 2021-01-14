@@ -109,18 +109,65 @@
 ////////////////////////////////////////////////////////////////
 
 .side-nav {
+  list-style: none;
+  font-size: 1.4rem;
+  margin-top: 3.5rem;
+
   &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 
-  &__link {
+  //  for animation of sidebar
+  &__item::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    height: 100%;
+    width: 3px;
+    // for hover effect
+    transform: scaleY(0);
+    transition: transform 0.2s,
+      width 0.4s 0.2s cubic-bezier(0.94, 0, 0.92, 0.95), background-color 0.1s;
+  }
+
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__item:active::before {
+    background-color: var(--color-primary-light);
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    display: block;
+    padding: 1.5rem 3rem;
+
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
   }
 
   &__icon {
     height: 1.75rem;
     width: 1.75rem;
+    fill: var(--color-grey-light-1);
+    margin-right: 1.5rem;
   }
 
   &__text {
+    text-transform: uppercase;
+    color: var(--color-grey-light-1);
   }
 }
 
