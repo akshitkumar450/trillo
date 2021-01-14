@@ -169,8 +169,13 @@
   padding-bottom: 2px;
   display: inline-block;
   transition: all 0.2s; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left 0.2s; }
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -224,6 +229,48 @@
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
 
+.review {
+  background-color: var(--color-grey-light-2);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  font-size: 1.4rem;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3rem; }
+  .review__text {
+    z-index: 10;
+    position: relative; }
+  .review__user {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .review__user-photo {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%; }
+  .review__user-box {
+    margin-left: -7rem; }
+  .review__user-name {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem; }
+  .review__user-date {
+    font-size: 1.1rem; }
+  .review__user-rating {
+    font-size: 2rem;
+    color: var(--color-primary); }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    color: var(--color-grey-light-3);
+    font-size: 20rem;
+    font-family: sans-serif;
+    line-height: 1;
+    z-index: 1; }
+
 .container {
   max-width: 120rem;
   margin: 8rem auto;
@@ -268,7 +315,10 @@
   padding: 2rem; }
 
 .user-reviews {
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /*
 COLORS
