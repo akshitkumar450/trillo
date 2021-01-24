@@ -38,6 +38,11 @@
       outline: none;
       width: 100%;
     }
+
+    &::placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
   }
 
   &__btn {
@@ -51,11 +56,6 @@
     width: 2rem;
     //  to change the color of svg icon
     fill: var(--color-grey-dark-3);
-  }
-
-  &::placeholder {
-    font-weight: 100;
-    color: var(--color-grey-light-4);
   }
 }
 

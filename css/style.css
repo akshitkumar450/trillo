@@ -25,6 +25,9 @@
     .search__input:focus {
       outline: none;
       width: 100%; }
+    .search__input::placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4); }
   .search__btn {
     border: none;
     background-color: var(--color-grey-light-3);
@@ -33,9 +36,6 @@
     height: 2rem;
     width: 2rem;
     fill: var(--color-grey-dark-3); }
-  .search::placeholder {
-    font-weight: 100;
-    color: var(--color-grey-light-4); }
 
 .user-nav {
   display: flex;
